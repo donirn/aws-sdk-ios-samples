@@ -153,7 +153,7 @@ You can use this generated **Endpoint ARN** to push notifications using Amazon S
 
 ##Receive push notifications callback
 
-When the iOS device receives the interactive push notification, and the user makes an action, `- application:handleActionWithIdentifier:forLocalNotification:completionHandler:` is called. By looking at `identifier`, you can find out which option the user selected in the interactive push notification.
+When the iOS device receives the interactive push notification, and the user makes an action, `- application:handleActionWithIdentifier:forRemoteNotification:completionHandler:` is called. By looking at `identifier`, you can find out which option the user selected in the interactive push notification.
 
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
         if identifier == "READ_IDENTIFIER" {
